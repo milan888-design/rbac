@@ -17,6 +17,13 @@ flowchart TD
     B[role] -->|associated with| F[object and access]  
     C[object] -->|associated with| F[object and access]  
 ```  
+## Flowchart - Users, roles and objects are by organization
+```mermaid  
+flowchart TD   
+    A[user] -->|associated with| D[organization]  
+    B[role] -->|associated with| D[organization] 
+    C[object] -->|associated with| D[organization]   
+```  
   
 ## Flowchart  Role Based Access Control process  
 ```mermaid  

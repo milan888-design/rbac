@@ -29,10 +29,11 @@ flowchart TD
 ```mermaid  
 flowchart TD  
     A[user] -->|authenticates at| B[authentication service]  
-    A[user] -->|picks a| C[role]  
-    D[user] -->|session with a role requests| E[object]
-    E[object] -->|checks with| F{RBAC service check}  
-    F -->|allow| G[object access]  
-    F -->|not allow| H[object access]  
+    B[authentication service] -->|makes| G[authenticated user]  
+    G[authenticated user] -->|picks a| C[organization]  
+    G[authenticated user] -->|with a role, organization requests| E[object access]
+    E[object access] -->|checks with| F{RBAC service}  
+    F -->|allow| G[object access granted]  
+    F -->|not allow| H[object access denied]  
 ```  
 

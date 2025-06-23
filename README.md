@@ -11,25 +11,21 @@ https://github.com/milan888-design/rbac
 
 ## Flowchart - Role Based Access Control setup 
 ```mermaid  
-flowchart TD  
-    A[user] -->|is assign| B[role]  
-    B[role] -->|is assgined| C[object]  
-    C[object] -->|has| D[access types]  
+flowchart TD   
     A[user] -->|associated with| E[user and role association]  
     B[role] -->|associated with| E[user and role association]  
-    B[role] -->|associated with| F[object and access type]  
-    C[object] -->|associated with| F[object and access type]  
+    B[role] -->|associated with| F[object and access]  
+    C[object] -->|associated with| F[object and access]  
 ```  
   
 ## Flowchart  Role Based Access Control process  
 ```mermaid  
 flowchart TD  
-    A[user] -->|authenticates| B[authentication service]  
+    A[user] -->|authenticates at| B[authentication service]  
     A[user] -->|picks a| C[role]  
-    A[user] -->|user id and role| D[RBAC service]  
-    D[user] -->|request for| E[object]
+    D[user] -->|session with a role requests| E[object]
     E[object] -->|checks with| F{RBAC service check}  
-    F -->|allow| G[object is accessed]  
-    F -->|not allow| H[object is not accessed]  
+    F -->|allow| G[object access]  
+    F -->|not allow| H[object access]  
 ```  
 

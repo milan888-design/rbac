@@ -33,7 +33,8 @@ flowchart TD
     G[authenticated user] -->|picks a| C[organization]  
     G[authenticated user] -->|with a role, organization requests| E[object access]
     E[object access] -->|checks with| F{RBAC service}  
-    F -->|allow| G[object access granted]  
+    F -->|allow| I[object access granted]  
     F -->|not allow| H[object access denied]  
 ```  
-
+  
+object: webpage, report, database table, row, attribute value   

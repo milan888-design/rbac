@@ -5,7 +5,7 @@
 -- Dumped from database version 16.2
 -- Dumped by pg_dump version 17.5
 
--- Started on 2025-06-23 21:55:35
+-- Started on 2025-06-24 09:39:40
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -24,7 +24,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 219 (class 1259 OID 51902)
+-- TOC entry 218 (class 1259 OID 51902)
 -- Name: st_object; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -59,7 +59,7 @@ CREATE TABLE public.st_object (
 ALTER TABLE public.st_object OWNER TO postgres;
 
 --
--- TOC entry 220 (class 1259 OID 51913)
+-- TOC entry 219 (class 1259 OID 51913)
 -- Name: st_role; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -87,48 +87,7 @@ CREATE TABLE public.st_role (
 ALTER TABLE public.st_role OWNER TO postgres;
 
 --
--- TOC entry 216 (class 1259 OID 51882)
--- Name: st_role_object; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.st_role_object (
-    role_object_key text,
-    role_key text,
-    object_type text,
-    object_key text,
-    object_name1 text,
-    object_name2 text,
-    object_name3 text,
-    object_create text,
-    object_retreive text,
-    object_update text,
-    object_delete text,
-    object_search text,
-    object_execute text,
-    start_date text,
-    end_date text,
-    active_flag text,
-    status text,
-    create_date text,
-    update_date text,
-    created_by text,
-    updated_by text,
-    source_instance text,
-    sync_flag text,
-    sync_status text,
-    sync_date text,
-    updatedby_instance text,
-    comment text,
-    sort_ty text,
-    sort_seq text,
-    org_id text
-);
-
-
-ALTER TABLE public.st_role_object OWNER TO postgres;
-
---
--- TOC entry 218 (class 1259 OID 51892)
+-- TOC entry 217 (class 1259 OID 51892)
 -- Name: st_role_object_operation; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -193,7 +152,7 @@ CREATE TABLE public.st_role_user (
 ALTER TABLE public.st_role_user OWNER TO postgres;
 
 --
--- TOC entry 217 (class 1259 OID 51887)
+-- TOC entry 216 (class 1259 OID 51887)
 -- Name: test_table; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -210,8 +169,8 @@ CREATE TABLE public.test_table (
 ALTER TABLE public.test_table OWNER TO postgres;
 
 --
--- TOC entry 4854 (class 0 OID 51902)
--- Dependencies: 219
+-- TOC entry 4849 (class 0 OID 51902)
+-- Dependencies: 218
 -- Data for Name: st_object; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -229,8 +188,8 @@ obj12	test_table query	query	test_rbac	\N	\N	query1	query1	\N	\N	\N	\N	\N	\N	\N	
 
 
 --
--- TOC entry 4855 (class 0 OID 51913)
--- Dependencies: 220
+-- TOC entry 4850 (class 0 OID 51913)
+-- Dependencies: 219
 -- Data for Name: st_role; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -241,22 +200,8 @@ rolekey2	standard	standard	\N	\N	Y	\N	\N	\N	\N	\N	\N	\N	\N	\N	111_1	DenyAllAllow
 
 
 --
--- TOC entry 4851 (class 0 OID 51882)
--- Dependencies: 216
--- Data for Name: st_role_object; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public.st_role_object (role_object_key, role_key, object_type, object_key, object_name1, object_name2, object_name3, object_create, object_retreive, object_update, object_delete, object_search, object_execute, start_date, end_date, active_flag, status, create_date, update_date, created_by, updated_by, source_instance, sync_flag, sync_status, sync_date, updatedby_instance, comment, sort_ty, sort_seq, org_id) FROM stdin;
-roleobj1	rolekey1	WebPage	st_search3.aspx	\N	\N	\N	\N	Y	\N	\N	\N	\N	\N	\N	Y	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	111_1
-roleobj2	rolekey2	WebPageBlock	st_search3.aspx|RefBlock	\N	\N	\N	\N	Y	\N	\N	\N	\N	\N	\N	Y	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	111_1
-roleobj3	rolekey1	databasetable	obj11	\N	\N	\N	\N	Y	Y	Y	Y	Y	\N	\N	Y	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	111_1
-roleobj4	rolekey2	databasetable	obj11	\N	\N	\N	\N	Y	N	N	Y	N	\N	\N	Y	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	111_1
-\.
-
-
---
--- TOC entry 4853 (class 0 OID 51892)
--- Dependencies: 218
+-- TOC entry 4848 (class 0 OID 51892)
+-- Dependencies: 217
 -- Data for Name: st_role_object_operation; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -275,7 +220,7 @@ roleobj10	rolekey2	databasetable	obj11	create	N	\N	\N	Y	\N	\N	\N	\N	\N	\N	\N	\N	
 
 
 --
--- TOC entry 4850 (class 0 OID 51872)
+-- TOC entry 4846 (class 0 OID 51872)
 -- Dependencies: 215
 -- Data for Name: st_role_user; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -287,8 +232,8 @@ roleuserkey8	rolekey1	\N	demomanager4	\N	\N	\N	Y	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\
 
 
 --
--- TOC entry 4852 (class 0 OID 51887)
--- Dependencies: 217
+-- TOC entry 4847 (class 0 OID 51887)
+-- Dependencies: 216
 -- Data for Name: test_table; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -318,7 +263,7 @@ pkid22	OrganisationState                                                        
 \.
 
 
--- Completed on 2025-06-23 21:55:36
+-- Completed on 2025-06-24 09:39:40
 
 --
 -- PostgreSQL database dump complete

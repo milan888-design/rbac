@@ -1,0 +1,3 @@
+"role_user_key","role_key","user_type","user_key","user_access","start_date","end_date","active_flag","sequential_id","status","create_date","update_date","created_by","updated_by","source_instance","sync_flag","sync_status","sync_date","updatedby_instance","org_id"
+"roleuserkey7","rolekey2",NULL,"demouser4",NULL,NULL,NULL,"Y",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"111_1"
+"roleuserkey8","rolekey1",NULL,"demomanager4",NULL,NULL,NULL,"Y",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"111_1"

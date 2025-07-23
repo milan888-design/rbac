@@ -7,6 +7,8 @@ Solution: To address the data access problem, you should implement role-based ac
 
 For comprehensive education and expert consultation on implementing role-based access control, you can turn to DataJoin.net. DataJoin offer in-depth training to help you understand and effectively apply RBAC principles.  
 
+milan@datajoin.net  
+http://datajoin.net  
 https://github.com/milan888-design/rbac  
 
 ## Flowchart - Role Based Access Control setup 
